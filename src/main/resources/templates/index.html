@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title th:text="${title}">FSDSAcademy full stack development  and design & digital course in india</title>
+  <meta content="India most recommended full stack & data science learning platfrom" name="description">
+  <meta content="full stack developer,web development,coding,python programming,python, front end developer,html code, full stack,python class,learn python,website development,java programming,python code,python course,programiz python,python basics,coding for beginners,c program,python for beginners,google summer of code, web development company,data structures in python,DBMS,java, JDBC, Springboot,hibernate, database, data structure,technical skills,spring framework,bootstrap,mongoDB,mySQL, CSS, JSP(java server page), coding classes,Figma,UI/UX, User Experience, technical classes, javaScript Vanilla,JavaScript ES6,Java Advance,
+	Core Java, Full stack basics to advance,User Interface," name="keywords">
+
+  <!-- Favicons -->
+  <link th:href="@{/img/favicon2.png}" rel="icon">
+  <link th:href="@{/img/favi-touch.png}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link  th:href="@{/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+  <link  th:href="@{/vendor/aos/aos.css}" rel="stylesheet">
+  <link  th:href="@{/vendor/glightbox/css/glightbox.min.css}" rel="stylesheet">
+  <link  th:href="@{/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link  th:href="@{/css/main.css}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Impact
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <section id="topbar" class="topbar d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">info@fsdsacademy.com</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 7290002907</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100094764056017&mibextid=ZbWKwL" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com/fsdsacademy?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section><!-- End Top Bar -->
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a th:href="@{/}" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+         <img src="/img/logo.png" alt=""> 
+        <!-- <h1>Impact<span>.</span></h1> -->
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a th:href="@{/}">Home</a></li>
+          <!-- <li><a href="#admission">Admission</a></li> -->
+          <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a th:href="@{full-stack}">Full Stack</a></li>
+              <li><a th:href="@{design-&-digital}">Design & Digital</a></li>
+            </ul>
+          </li>
+          <!-- <li><a href="#portfolio">Placement</a></li> -->
+          <li><a th:href="@{#faq}">Faq</a></li>
+          <li><a th:href="@{blog.html}">Blog</a></li>
+          <li><a th:href="@{#contact}">Get In Touch</a></li>
+          <!-- <li><a th:href="@{/}" th:if="${session.sid}=='0'">Login</a>
+          <a th:href="@{/logout}" th:if="${session.sid}!='0'">Logout</a>
+          </li> -->
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  
+
+   <!-- <section id="hero" class="hero"> -->
+    <!-- <section> -->
+    <div id="homecarousel" class="carousel slide">
+      
+      <div class="carousel-inner">
+        <div class="carousel-item active" >
+          <div class="row gy-5" data-aos="fade-in">
+            <div class="col-lg-12  d-flex flex-column justify-content-center text-center text-lg-start">
+             <!--  <div class="carouse_cap"><h2>Welcome to <span>FSDS Academy</span></h2>
+                <p style="width: 80%;">Welcome to our Full Stack Development Course! This beginner-friendly tool will walk you through creating a website from the start. You will begin by learning the fundamentals of utilizing HTML to create web pages and CSS to style them before moving on to JavaScript for interactive web page creation. Learn Node.js' server side and MongoDB's data storage capabilities. Finish by using React to develop dynamic user interfaces. To create a strong portfolio, you'll work on actual projects throughout. In order to prepare you for employment in the quickly changing tech industry, this course focuses on practical skills. Let's get coding and start planning your future!</p>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                  <a href="#about" class="btn-get-started">Get Started</a>
+                  <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                </div> 
+            </div>-->
+              <img th:src="@{/img/full-stack.jpeg}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+              <a th:href="@{full-stack}" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row gy-5" data-aos="fade-in">
+            <div class="col-lg-12  d-flex flex-column justify-content-center text-center text-lg-start">
+             <!--  <div class="carouse_cap"><h2>Welcome to <span>Impact</span></h2>
+                <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
+                
+              </div> -->
+              <img th:src="@{/img/digital.jpeg}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+              <a th:href="@{full-stack}" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#homecarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#homecarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  
+
+  <main id="main">
+    <!-- ======= Our second banner Section ======= -->
+    <!-- <section id="banner2" class="banner2">
+      <div class="container banner2" data-aos="fade-up">
+        <div class="card">
+          <div class="card-body">
+          <div class="row">
+            <div class="col-md-3 col-xl-3 col-6">
+              <img src="/img/digital.jpeg" />
+            </div>
+            <div class="col-md-9 col-xl-9 col-6">
+              <h2>The div element has no special meaning at all. It represents its children.</h2>
+              <p>Our career focused programs in Animation, Design, Media, Digital Marketing, Artificial Intelligence are the ideal blend of theoretical learning & practical experience thought by Managers, Designers who have active industry connection and rich corporate experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section> -->
+
+
+    <!-- ======= Our Services Section ======= -->
+    <section id="services" class="services sections-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our Courses</h2>
+          <p>Welcome to FSDS Academy, the starting point of a life-changing educational journey. We only offer courses in design, digital, and full-stack development, and we are specialists in those fields. A curriculum that is industry-driven, practical projects, and professional mentoring will help you dive into the world of creativity and technology. In the fields of design and development, realize your full potential.</p>
+        </div>
+
+        <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item  position-relative">
+              <div class="serv_body">
+              <h3>Full Stack Developer</h3>
+              <p>Creating both the front-end and back-end components of a web application, as well as client-side and server-side technologies, is known as full-stack development.</p>
+              <a th:href="@{full-stack}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="serv_body">
+              <!-- <div class="icon">
+                <i class="bi bi-broadcast"></i>
+              </div> -->
+              <h3>Design & Digital</h3>
+              <p>Our design and digital course investigates user interface (UI) and user experience (UX) design principles, digital tools, and multimedia, giving students both technical and creative abilities.</p>
+              <a th:href="@{design-&-digital}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          </div><!-- End Service Item -->
+        </div>
+
+      </div>
+    </section><!-- End Our Services Section -->
+
+    
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials sections-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our Team</h2>
+          <p>Learn more about the creative brains behind FSDS Academy. As a result of the passion and experience our broad team of specialists bring to the table, education is becoming more innovative. Discover the people influencing your educational path.</p>
+        </div>
+
+        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item p-0">
+                  <div class="member">
+                    <img th:src="@{/img/dummy.jpg}" class="img-fluid" alt="">
+                    <h4>Nisha Pal</h4>
+                    <span>Frontend Developer</span>
+                    <div class="social">
+                      <a href=""><i class="bi bi-twitter"></i></a>
+                      <a href=""><i class="bi bi-facebook"></i></a>
+                      <a href=""><i class="bi bi-instagram"></i></a>
+                      <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item p-0">
+                  <div class="member">
+                    <img th:src="@{/img/dummy.jpg}" class="img-fluid" alt="">
+                    <h4>Jaya Prajapati</h4>
+                    <span>Digital Marketing</span>
+                    <div class="social">
+                      <a href=""><i class="bi bi-twitter"></i></a>
+                      <a href=""><i class="bi bi-facebook"></i></a>
+                      <a href=""><i class="bi bi-instagram"></i></a>
+                      <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item p-0">
+                  <div class="member">
+                    <img th:src="@{/img/dummy.jpg}" class="img-fluid" alt="">
+                    <h4>Ananya Kumar</h4>
+                    <span>Graphic Integrations</span>
+                    <div class="social">
+                      <a href=""><i class="bi bi-twitter"></i></a>
+                      <a href=""><i class="bi bi-facebook"></i></a>
+                      <a href=""><i class="bi bi-instagram"></i></a>
+                      <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item p-0">
+                  <div class="member">
+                    <img th:src="@{/img/dummy.jpg}" class="img-fluid" alt="">
+                    <h4>Anuradha Mishra</h4>
+                    <span>Backend Developer</span>
+                    <div class="social">
+                      <a href=""><i class="bi bi-twitter"></i></a>
+                      <a href=""><i class="bi bi-facebook"></i></a>
+                      <a href=""><i class="bi bi-instagram"></i></a>
+                      <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item p-0">
+                  <div class="member">
+                    <img th:src="@{/img/dummy.jpg}" class="img-fluid" alt="">
+                    <h4>Rishi Anand</h4>
+                    <span>Project Manager</span>
+                    <div class="social">
+                      <a href=""><i class="bi bi-twitter"></i></a>
+                      <a href=""><i class="bi bi-facebook"></i></a>
+                      <a href=""><i class="bi bi-instagram"></i></a>
+                      <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+
+    
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Get in Touch</h2>
+          <p>Empower your learning journey with us. Join our EdTech revolution for a brighter educational future</p>
+        </div>
+
+        <div class="row gx-lg-0 gy-4">
+
+          <div class="col-lg-4 contact_info">
+
+            <div class="info-container  d-flex flex-column align-items-center justify-content-center">
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h4>Location:</h4>
+                  <p>A-27L, A block, sector 16, Noida (201301), U.P., India</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p>info@fsdsacademy.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4>Call:</h4>
+                  <p>+91 7290002907</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-clock flex-shrink-0"></i>
+                <div>
+                  <h4>Open Hours:</h4>
+                  <p>Mon-Sat: 10AM - 7PM</p>
+                </div>
+              </div><!-- End Info Item -->
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mx-auto">
+            <form action="#" method="post" role="form" class="contact_form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="7" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our Students</h2>
+          <p>Visit our feedback section to see student comments. Learn how our design and full-stack development courses empower students by giving them access to transformative learning opportunities and supportive communities.</p>
+        </div>
+
+        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center">
+                    <img th:src="@{/img/dummy.jpg}" class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      <h3>Ashish</h3>
+                      <!--<h4>Ceo &amp; Founder</h4>-->
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    FSDS Academy is my second home. I have built great relationships with my classmates, teachers, and staff. Being at FSDS Academy has been an amazing experience for me that has helped me grow personally and professionally.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center">
+                    <img th:src="@{/img/dummy.jpg}" class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      <h3>Abhinav</h3>
+                      <!--<h4>Designer</h4>-->
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    In my experience all the teachers are very supportive and friendly and the placement process has been very smooth throughout. I would always be very grateful for the lifelong connections I made
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center">
+                    <img th:src="@{/img/dummy.jpg}" class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      <h3>Atul</h3>
+                      <!--<h4>Store Owner</h4>-->
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    FSDS Academy  is a place where you can find an amalgamation of learning. I feel  great studying at FSDS Academy as it gives great opportunity as well as support from faculties and placement officers. Getting placed in Wipro is an achievement for me for which i would like to thank FSDS Academy.<i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center">
+                    <img th:src="@{/img/dummy.jpg}" class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      <h3>Rubina</h3>
+                      <!--<h4>Freelancer</h4>-->
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    FSDS Academy is my second home. I have built great relationships with my classmates, teachers, and staff. Being at FSDS Academy has been an amazing experience for me that has helped me grow personally and professionally.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center">
+                    <img th:src="@{/img/dummy.jpg}" class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      <h3>Ravi</h3>
+                      <!--<h4>Entrepreneur</h4>-->
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    FSDS Academy is my second home. I have built great relationships with my classmates, teachers, and staff. Being at FSDS Academy has been an amazing experience for me that has helped me grow personally and professionally.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a th:href="@{/}" class="logo d-flex align-items-center">
+            <span>FSDS Academy</span>
+          </a>
+          <p>At FSDS Academy, our passion lies in harnessing the transformative power of education to unlock the full potential of individuals. Recognizing the limitations of traditional learning approaches in our fast-paced world, we aim to revolutionize education using technology as our tool for change.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" target="_blank"  class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100094764056017&mibextid=ZbWKwL" target="_blank"  class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/fsdsacademy?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"  class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" target="_blank"  class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>
+            A-27L, A block,<br> 
+            sector 16, Noida (201301)<br>
+            U.P., India<br><br>
+            <strong>Phone:</strong> +91 7290002907<br>
+            <strong>Email:</strong> info@fsdsacademy.com<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <script th:src="@{/vendor/aos/aos.js}"></script>
+  <script th:src="@{/vendor/glightbox/js/glightbox.min.js}"></script>
+  <script th:src="@{/vendor/purecounter/purecounter_vanilla.js}"></script>
+  <script th:src="@{/vendor/swiper/swiper-bundle.min.js}"></script>
+  <script th:src="@{/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
+  <script th:src="@{/vendor/php-email-form/validate.js}"></script>
+
+  <!-- Template Main JS File -->
+  <script th:src="@{/js/main.js}"></script>
+
+</body>
+
+</html>

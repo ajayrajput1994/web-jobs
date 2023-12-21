@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thumeleaf.org" th:replace="homebase::layout(~{::div.deep})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="deep">
+    <!-- ======= Our Services Section ======= -->
+    <section id="profile " class="profile sections-bg my-5">
+      <div class="container" data-aos="fade-up">
+        <div class="d-flex align-items-start row gy-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="nav flex-column nav-pills me-3 col-lg-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <div class="profile_img text-center mb-2" >
+                <img th:src="@{img/dummy.jpg}" style="height:150px;width:150px;"></div>
+              <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Basic Info</button>
+              <button class="nav-link" id="v-pills-person-tab" data-bs-toggle="pill" data-bs-target="#v-pills-person" type="button" role="tab" aria-controls="v-pills-person" aria-selected="false">personal Info</button>
+              <button class="nav-link" id="v-pills-address-tab" data-bs-toggle="pill" data-bs-target="#v-pills-address" type="button" role="tab" aria-controls="v-pills-address" aria-selected="false">Address</button>
+              <button class="nav-link" id="v-pills-education-tab" data-bs-toggle="pill" data-bs-target="#v-pills-education" type="button" role="tab" aria-controls="v-pills-education" aria-selected="false">Education Details</button>
+              <button class="nav-link" id="v-pills-resume-tab" data-bs-toggle="pill" data-bs-target="#v-pills-resume" type="button" role="tab" aria-controls="v-pills-resume" aria-selected="false">Upload Resume</button>
+              <button class="nav-link" id="v-pills-image-tab" data-bs-toggle="pill" data-bs-target="#v-pills-image" type="button" role="tab" aria-controls="v-pills-image" aria-selected="false">Upload profile</button>
+              <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Change Password</button>
+            </div>
+            <div class="tab-content col-lg-8" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                <div class="card">
+                    <h3>Basic information</h3>
+                    <div class="card-body" th:if="${student} != 'null'">
+                        <form action="#" name="profile_basic" method="post" role="form">
+                            <div class="row">
+                              <div class="col-md-6 form-group">
+                                <label for="name">Enter Name</label>
+                                <input type="text" name="name"  class="form-control" id="name" placeholder="Enter Name" autocomplete="Enter name" required>
+                              </div>
+                              <div class="col-md-6 form-group">
+                                <label for="email">Enter valid Email</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email" autocomplete="on" required>
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                  <label for="phone">Enter Phone Number</label>
+                                  <input type="text" name="phone" class="form-control" id="phone" placeholder="Enter phone Number" autocomplete="Enter phone" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                  <label for="roll_no">Enter Roll Number</label>
+                                  <input type="text" class="form-control" name="roll_no" id="roll_no" placeholder="Enter Number" autocomplete="Enter Roll Number" required>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 form-group">
+                                  <label for="joiningdate">It's Your Joining Date</label>
+                                  <input type="text" name="joiningdate" class="form-control" id="joiningdate" placeholder="Joining Date" disabled>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                  <label for="updatedate">It's Your last modify date</label>
+                                  <input type="text" class="form-control" name="updatedate" id="updatedate" placeholder="Last Update" disabled>
+                                </div>
+                              </div>
+                            <div class="text-center mt-3"><button type="submit">submit</button></div>
+                          </form>
+                    </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-person" role="tabpanel" aria-labelledby="v-pills-person-tab" tabindex="0">
+                <div class="card">
+                    <h3>Personal information</h3>
+                    <div class="card-body">
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="row">
+                              <div class="col-md-6 form-group">
+                                <input type="text" name="dob" class="form-control" id="dob" placeholder="DOB: DD/MM/YYYY" required>
+                              </div>
+                              <div class="col-md-6 form-group">
+                                <select name="gender" id="gender" class="form-control" >
+                                  <option selected disabled>Select Gender</option>
+                                  <option value="male">Male</option>
+                                  <option value="female">Female</option>
+                                  <option value="other">Other</option>
+                                </select>
+                                <!-- <input type="text" class="form-control" name="gender" id="gender" placeholder="Gender" required> -->
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                  <input type="text" name="nationality" class="form-control" id="nationality" placeholder="Nationality" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                  <input type="text" class="form-control" name="bloodgroup" id="bloodgroup" placeholder="Blood Group" required>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 form-group">
+                                  <input type="text" name="aadharcard" class="form-control" id="aadharcard" placeholder="Aadhar Number" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="aadharpic">Aadhar Upload</label>
+                                  <input type="file" class="form-control" name="aadharpic" id="aadharpic" placeholder="Aadhar pic" required>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 form-group">
+                                  <input type="text" name="pancard" class="form-control" id="pancard" placeholder="PAN Card" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="panpic">PAN Card Upload</label>
+                                  <input type="file" class="form-control" name="panpic" id="panpic" placeholder="PAN pic" required>
+                                </div>
+                              </div>
+                            <div class="form-group">
+                                <label for="signature">Signature Upload</label>
+                              <input type="file" class="form-control" data-bs-toggle="tooltip" data-bs-title="Signature" name="signature" id="signature" placeholder="Signature" required>
+                            </div>
+                            <div class="text-center mt-3"><button type="submit">submit</button></div>
+                          </form>
+                    </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-address" role="tabpanel" aria-labelledby="v-pills-address-tab" tabindex="0">
+                <div class="card">
+                    <h3>Address</h3>
+                    <div class="card-body">
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="row">
+                              <div class="col-md-6 form-group">
+                                <input type="text" name="peraddress" class="form-control" id="peraddress" placeholder="Permanent Address" required>
+                              </div>
+                              <div class="col-md-6 form-group ">
+                                <input type="text" class="form-control" name="peraddresspin" id="peraddresspin" placeholder="Permanent Add. PIN Code" required>
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                  <input type="text" name="corraddress" class="form-control" id="corraddress" placeholder="Correspondance Address" required>
+                                </div>
+                                <div class="col-md-6 form-group ">
+                                  <input type="text" class="form-control" name="corraddresspin" id="corraddresspin" placeholder="Correspondance Add. PIN Code" required>
+                                </div>
+                              </div>
+                            <div class="text-center mt-3"><button type="submit">submit</button></div>
+                          </form>
+                    </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-education" role="tabpanel" aria-labelledby="v-pills-education-tab" tabindex="0">
+                <div class="card">
+                    <h3>Education Details</h3>
+                    <div class="card-body">
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="form-group">
+                                <input type="text" name="college" class="form-control" id="college" placeholder="College / University" required>
+                              </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="collegemarks">College Marks</label>
+                                  <input type="text" name="collegemarks" class="form-control" id="collegemarks" placeholder="Marks (%)" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="collegemarksheet">College Marksheet Upload</label>
+                                  <input type="file" class="form-control" name="collegemarksheet" id="collegemarksheet" placeholder="marksheet upload" required>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <input type="text" class="form-control" name="school12th" id="school12th" placeholder="School Name" required>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="marks12th">12th Marks</label>
+                                  <input type="text" name="marks12th" class="form-control" id="marks12th" placeholder="Marks (%)" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="marksheet12th">12th Marksheet Upload</label>
+                                  <input type="file" class="form-control" name="marksheet12th" id="marksheet12th" placeholder="12th marksheet" required>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <input type="text" class="form-control" name="school1th" id="school10th" placeholder="School Name" required>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="marks10th">10th Marks</label>
+                                  <input type="text" name="marks10th" class="form-control" id="marks10th" placeholder="Marks (%)" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="marksheet10th">10th Marksheet Upload</label>
+                                  <input type="file" class="form-control" name="marksheet10th" id="marksheet10th" placeholder="10th marksheet" required>
+                                </div>
+                              </div>
+                            <!-- <div class="form-group mt-3">
+                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                            </div> -->
+                            <div class="text-center mt-3"><button type="submit">submit</button></div>
+                          </form>
+                    </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-resume" role="tabpanel" aria-labelledby="v-pills-resume-tab" tabindex="0">
+                <div class="card">
+                    <h3>Upload Resume</h3>
+                    <div class="card-body">
+                        <form>
+                                <div class="form-group">
+                                    <label for="resume" >Upload resume</label>
+                                  <input type="file" name="resume" class="form-control" id="resume" placeholder="upload resume" required>
+                                </div>
+                                <div class="text-center mt-3"><button type="submit">submit</button></div>
+                        </form>
+                    </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-image" role="tabpanel" aria-labelledby="v-pills-image-tab" tabindex="0">
+                <div class="card">
+                    <h3>Update profile</h3>
+                    <div class="card-body">
+                        <form>
+                                <div class="form-group">
+                                    <label for="image">update profile</label>
+                                  <input type="file" name="image" class="form-control" id="image" placeholder="upload image" required>
+                                </div>
+                                <div class="text-center mt-3"><button type="submit">submit</button></div>
+                        </form>
+                    </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
+                <div class="card">
+                    <h3>Change Password</h3>
+                    <div class="card-body">
+                        <form>
+                                <div class="form-group">
+                                  <input type="text" name="newpassword" class="form-control" id="newpassword" placeholder="New Password" required>
+                                </div>
+                                <div class="text-center mt-3"><button type="submit">submit</button></div>
+                        </form>
+                    </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
+            </div>
+          </div>
+        
+
+      </div>
+    </section><!-- End Our profile Section -->
+ 
+  </div><!-- End #main -->
+</body>
+</html>

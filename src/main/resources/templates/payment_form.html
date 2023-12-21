@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	  <meta charset="utf-8">
+	  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	
+	  <title th:text="${title}">FSDSAcademy full stack development  and design & digital course in india</title>
+	  <meta content="India most recommended full stack & data science learning platfrom" name="description">
+	  <meta content="full stack developer,web development,coding,python programming,python, front end developer,html code, full stack,python class,learn python,website development,java programming,python code,python course,programiz python,python basics,coding for beginners,c program,python for beginners,google summer of code, web development company,data structures in python,DBMS,java, JDBC, Springboot,hibernate, database, data structure,technical skills,spring framework,bootstrap,mongoDB,mySQL, CSS, JSP(java server page), coding classes,Figma,UI/UX, User Experience, technical classes, javaScript Vanilla,JavaScript ES6,Java Advance,
+	  Core Java, Full stack basics to advance,User Interface," name="keywords">
+	
+	  <!-- Favicons -->
+	  <link th:href="@{/img/favicon2.png}" rel="icon">
+	  <link th:href="@{/img/favi-touch.png}" rel="apple-touch-icon">
+	
+	  <!-- Google Fonts -->
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	
+	  <!-- Vendor CSS Files -->
+	  <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+	  <link  th:href="@{/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+	  <link  th:href="@{/vendor/aos/aos.css}" rel="stylesheet">
+	  <link  th:href="@{/vendor/glightbox/css/glightbox.min.css}" rel="stylesheet">
+	  <link  th:href="@{/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+	
+	  <!-- Template Main CSS File -->
+	  <link  th:href="@{/css/main.css}" rel="stylesheet">
+	
+	</head>
+<body>
+<div class="deep">
+<div class="container">
+<div class="row">
+	<div class="col-md-5 mx-auto">
+		<div class="card">
+			<div class="card-body text-center my-3 mt-2">
+				<img class="img" th:src="@{/img/qrcode2.jpeg}" style="height:300px;width:300px;">
+				<form th:action="@{/payment-process}" method="post"  >
+				<h1>Rs. 5000</h1>
+				<span style="font-size:12px;color:red;">Scan QR code then enter 5000Rs pay amount then enter utr number and submit</span>
+						<div class="mt-3">
+	                            <input type="text" name="utr" class="form-control" placeholder="Enter UTR Number" />
+	                        </div>
+                        <div class="mx-auto mt-2">
+                            <button class="btn btn-primary w-100" type="submit">Submit</button>
+                        </div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <script th:src="@{/vendor/aos/aos.js}"></script>
+  <script th:src="@{/vendor/glightbox/js/glightbox.min.js}"></script>
+  <script th:src="@{/vendor/purecounter/purecounter_vanilla.js}"></script>
+  <script th:src="@{/vendor/swiper/swiper-bundle.min.js}"></script>
+  <script th:src="@{/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
+  <script th:src="@{/vendor/php-email-form/validate.js}"></script>
+
+  <!-- Template Main JS File -->
+  <script th:src="@{/js/main.js}"></script>
+</body>
+</html>
